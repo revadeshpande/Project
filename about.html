@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center">Information about all the Home remedies</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+  <center>  <img src="turmeric.webp" style="width:50%"></center>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+   <center> <img src="mint2.jpeg" style="width:50%"></center>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+  <center>  <img src="honey.jpg" style="width:50%"></center>
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+  <center>  <img src="ginger.jpg" style="width:50%"></center>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <center><img src="tea.webp" style="width:50%"></center>
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+   <center> <img src="garlic.jpg" style="width:50%"></center>
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="turmeric.webp" style="width:100%" onclick="currentSlide(1)" alt="TURMERIC : This spice has been hyped as being able to help with a variety of conditions from arthritis to fatty liver. There is some early research to support this. Other claims, such as healing ulcers and helping with skin rashes after radiation are lacking proof. If you try it, don’t overdo it: High doses can cause digestive problems.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mint2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="PEPPERMINT : Mint has been used for hundreds of years as a health remedy. Peppermint oil might help with irritable bowel syndrome a long-term condition that can cause cramps, bloating, gas, diarrhea, and constipation and it may be good for headaches as well. More studies are needed to see how much it helps and why. People use the leaf for other conditions, too, but there’s very little evidence it helps with any of them. ">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="honey.jpg" style="width:100%" onclick="currentSlide(3)" alt="HONEY : This natural sweetener may work just as well for a cough as over-the-counter medicines. That could be especially helpful for children who aren’t old enough to take those. But don’t give it to an infant or a toddler younger than 1. There’s a small risk of a rare but serious kind of food poisoning that could be dangerous for them. And while you may have heard that “local” honey can help with allergies, studies don’t back that up.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="ginger.jpg" style="width:100%" onclick="currentSlide(4)" alt="GINGER : It’s been used for thousands of years in Asian medicine to treat stomachaches, diarrhea, and nausea, and studies show that it works for nausea and vomiting. There’s some evidence that it might help with menstrual cramps, too. But it’s not necessarily good for everyone. Some people get tummy trouble, heartburn, diarrhea, and gas because of it, and it may affect how some medications work. So talk to your doctor, and use it with care.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="tea.webp" style="width:100%" onclick="currentSlide(5)" alt="GREEN TEA : This comforting drink does more than keep you awake and alert. It’s a great source of some powerful antioxidants that can protect your cells from damage and help you fight disease. It may even lower your odds of heart disease and certain kinds of cancers, like skin, breast, lung, and colon.">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="garlic.jpg" style="width:100%" onclick="currentSlide(6)" alt="GARLIC : Some studies show that people who eat more garlic are less likely to get certain types of cancer (garlic supplements don’t seem to have the same effect). It also may lower blood cholesterol and blood pressure levels, but it doesn’t seem to help that much.">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
